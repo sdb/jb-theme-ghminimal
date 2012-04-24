@@ -1,5 +1,3 @@
-## Jekyll-Bootstrap ghminimal Theme
-
 A theme compatible with [Jekyll-Bootstrap](http://jekyllbootstrap.com). This theme is based on the [minimal](http://github.com/orderedlist/minimal) theme (for GitHub Pages), created by [Steve Smith](https://github.com/orderedlist).
 
 Jekyll-Bootstrap is a blogging framework with built-in support for theming, analytics, comments, and post/page creation.
