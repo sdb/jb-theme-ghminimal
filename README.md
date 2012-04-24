@@ -1,6 +1,8 @@
-# Jekyll-Bootstrap GHMinimal Theme
+# Jekyll-Bootstrap ghminimal
 
-A theme compatible with Jekyll-Bootstrap. This theme is based on [Minimal Theme](http://github.com/orderedlist/minimal) (for GitHub Pages) by [Steve Smith](https://github.com/orderedlist).
+A theme compatible with Jekyll-Bootstrap.
+
+This theme is based on [minimal](http://github.com/orderedlist/minimal) theme (for GitHub Pages) by [Steve Smith](https://github.com/orderedlist).
 
 See [Jekyll-Bootstrap](http://jekyllbootstrap.com) for usage.
 
