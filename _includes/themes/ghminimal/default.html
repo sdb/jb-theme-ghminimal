@@ -19,32 +19,33 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <h1><a href="/">{{ site.title }}</a></h1>
-        {% if site.tagline %}
-        <p>{{ site.tagline }}</p>
-        {% endif %}
-        <ul>
+      <header class="main">
+        <hgroup>
+          <h1><a href="/">{{ site.title }}</a></h1>
+          {% if site.tagline %}
+          <h2>{{ site.tagline }}</h2>
+          {% endif %}
+        </hgroup>
+        <nav>
+          <ul>
             <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Blog <strong>Archive</strong></a></li>
             <li><a href="{{ BASE_PATH }}{{ site.JB.pages_path }}">All <strong>Pages</strong></a></li>
             <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}">All <strong>Tags</strong></a></li>
-        </ul>
+          </ul>
+        </nav>
       </header>
       <section id="page">
         {{ content }}
-        <div>
-          <p class="gotop">
-            <a href="#page">Back to Top</a>
-          </p>
-        </div>
       </section>
-      <footer>
+      <aside>
         <ul>
           <li class="contact"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
             <li class="linkedin"><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me">linkedin.com/{{ site.author.linkedin }}</a></li>
             <li class="github"><a href="http://github.com/{{ site.author.github }}/" rel="me">github.com/{{ site.author.github }}</a></li>
             <li class="twitter"><a href="http://twitter.com/{{ site.author.twitter }}/" rel="me">twitter.com/{{ site.author.twitter }}</a></li>
         </ul>
+      </aside>
+      <footer class="main">
         <p>
           <small>Themed with <a href="http://github.com/sdb/jb-theme-ghminimal">ghminimal</a> based on <a href="http://github.com/orderedlist/minimal/">minimal</a>. Powered by <a href="http://github.com/mojombo/jekyll">Jekyll</a> and <a href="http://pages.github.com/">GitHub Pages</a>.</small>
         </p>

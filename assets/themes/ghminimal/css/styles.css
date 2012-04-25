@@ -7,6 +7,10 @@ body {
   font-weight:300;
 }
 
+html {
+  overflow-y: scroll;
+}
+
 h1, h2, h3, h4, h5, h6 {
   color:#222;
   margin:0 0 20px;
@@ -103,13 +107,13 @@ img {
   max-width:100%;
 }
 
-header {
+header.main {
   width:270px;
   float:left;
   position:fixed;
 }
 
-header ul {
+header.main ul {
   list-style:none;
   height:40px;
   
@@ -129,22 +133,22 @@ header ul {
   width:270px;
 }
 
-header li {
+header.main li {
   width:89px;
   float:left;
   border-right:1px solid #d2d2d2;
   height:40px;
 }
 
-header li:first-child a {
+header.main li:first-child a {
   border-radius:5px 0 0 5px;
 }
 
-header li:last-child a {
+header.main li:last-child a {
   border-radius:0 5px 5px 0;
 }
 
-header ul a {
+header.main ul a {
   line-height:1;
   font-size:11px;
   color:#999;
@@ -154,7 +158,7 @@ header ul a {
   height:34px;
 }
 
-header ul a:hover {
+header.main ul a:hover {
   color:#999;
   background: -moz-linear-gradient(top, #fff 0%, #ddd 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#ddd));
@@ -164,7 +168,7 @@ header ul a:hover {
   background: linear-gradient(top, #fff 0%,#ddd 100%);
 }
 
-header ul a:active {
+header.main ul a:active {
   -webkit-box-shadow: inset 0px 2px 2px 0px #ddd;
   -moz-box-shadow: inset 0px 2px 2px 0px #ddd;
   box-shadow: inset 0px 2px 2px 0px #ddd;
@@ -175,28 +179,28 @@ strong {
   font-weight:700;
 }
 
-header ul li + li {
+header.main ul li + li {
   width:88px;
   border-left:1px solid #fff;
 }
 
-header ul li + li + li {
+header.main ul li + li + li {
   border-right:none;
   width:89px;
 }
 
-header ul a strong {
+header.main ul a strong {
   font-size:14px;
   display:block;
   color:#222;
 }
 
-header h1 a {
+header.main h1 a {
   color: inherit;
   font-weight: bold;
 }
 
-header h1 a:link {
+header.main h1 a:link {
   color: inherit;
 }
 
@@ -217,28 +221,56 @@ hr {
   margin:0 0 20px;
 }
 
-footer {
+footer.main {
   width:270px;
   float:left;
   position:fixed;
   bottom:50px;
 }
 
-footer ul {
+
+aside {
+  width:270px;
+  float:left;
+  position:fixed;
+  bottom:115px;
+}
+
+aside ul {
   list-style:none;
   padding:0;
   margin-bottom: 35px;
 }
 
-footer ul a {
+aside ul a {
   line-height:1.6em;
   font-size:12px;
   display:block;
 }
 
-footer ul a:hover {
+aside ul a:hover {
   color:#999;
 }
+
+
+header.main h2 {
+  color: inherit;
+  line-height: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+
+article header h1 {
+  margin-bottom: 5px;
+}
+
+article header p {
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+}
+
 
 @media print, screen and (max-width: 960px) {
   
@@ -247,13 +279,13 @@ footer ul a:hover {
     margin:0;
   }
   
-  header, section, footer {
+  header.main, section, footer.main, aside {
     float:none;
     position:static;
     width:auto;
   }
   
-  header {
+  header.main {
     padding-right:320px;
   }
   
@@ -264,11 +296,11 @@ footer ul a:hover {
     margin:0 0 20px;
   }
   
-  header a small {
+  header.main a small {
     display:inline;
   }
   
-  header ul {
+  header.main ul {
     position:absolute;
     right:50px;
     top:52px;
@@ -280,11 +312,11 @@ footer ul a:hover {
     word-wrap:break-word;
   }
   
-  header {
+  header.main {
     padding:0;
   }
   
-  header ul, header p.view {
+  header.main ul {
     position:static;
   }
   
@@ -298,7 +330,7 @@ footer ul a:hover {
     padding:15px;
   }
   
-  header ul {
+  header.main ul {
     display:none;
   }
 }

@@ -1,16 +1,18 @@
-<h1>{{ page.title }}</h1>
+<article>
+	<header>
+		<h1>{{ page.title }}</h1>
+		<p>Published on <time datetime="{{ page.date | date_to_xmlschema }}" pubdate>
+			{{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }}
+		</time></p>
+	</header>
 
-{{ content }}
+	{{ content }}
 
-<div class="meta">
-<p class="date-publish">
-	Published on 
-	<date class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}" pubdate>
-	<span class="month"><abbr>{{ page.date | date: '%B' }}</abbr></span>
-	<span class="day">{{ page.date | date: '%d' }}</span>,
-	<span class="year">{{ page.date | date: '%Y' }}</span>
-	</date>
-</p>
-</div>
+	<footer>
+      <p class="gotop">
+        <a href="#page">Back to Top</a>
+      </p>
+	</footer>
 
-{% include JB/comments %}
+	{% include JB/comments %}
+</article>
