@@ -26,23 +26,29 @@
           <h2>{{ site.tagline }}</h2>
           {% endif %}
         </hgroup>
-        <nav>
-          <ul>
-            <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Blog <strong>Archive</strong></a></li>
-            <li><a href="{{ BASE_PATH }}{{ site.JB.pages_path }}">All <strong>Pages</strong></a></li>
-            <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}">All <strong>Tags</strong></a></li>
-          </ul>
-        </nav>
+        <ul class="buttons">
+          <li><a href="http://github.com/{{ site.author.github }}/" rel="me">Code <strong>GitHub</strong></a></li>
+          <li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me">Connect <strong>LinkedIn</strong></a></li>
+          <li><a href="http://twitter.com/{{ site.author.twitter }}/" rel="me">Follow <strong>Twitter</strong></a></li>
+        </ul>
       </header>
       <section id="page">
         {{ content }}
       </section>
       <aside>
+        <nav>
+          <ul>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.about_path }}">About</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.contact_path }}">Contact</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.elsewhere_path }}">Elsewhere</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.pages_path }}">Pages</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}">Categories</a></li>
+            <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}">Tags</a></li>
+          </ul>
+        </nav>
         <ul>
           <li class="contact"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
-            <li class="linkedin"><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me">linkedin.com/{{ site.author.linkedin }}</a></li>
-            <li class="github"><a href="http://github.com/{{ site.author.github }}/" rel="me">github.com/{{ site.author.github }}</a></li>
-            <li class="twitter"><a href="http://twitter.com/{{ site.author.twitter }}/" rel="me">twitter.com/{{ site.author.twitter }}</a></li>
         </ul>
       </aside>
       <footer class="main">
