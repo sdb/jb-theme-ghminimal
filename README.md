@@ -2,6 +2,8 @@ A theme compatible with [Jekyll-Bootstrap](http://jekyllbootstrap.com). This the
 
 Jekyll-Bootstrap is a blogging framework with built-in support for theming, analytics, comments, and post/page creation.
 
+[See this theme in action.](http://sdb.github.com/)
+
 ## Usage
 
 See the Jekyll-Bootstrap [tutorial](http://jekyllbootstrap.com/usage/index.html) for instructions on how to get your blog installed and published via [GitHub Pages](http://pages.github.com/).
