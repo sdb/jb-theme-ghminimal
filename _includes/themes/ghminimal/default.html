@@ -38,13 +38,9 @@
       <aside>
         <nav>
           <ul>
-            <li><a href="{{ BASE_PATH }}{{ site.JB.about_path }}">About</a></li>
-            <li><a href="{{ BASE_PATH }}{{ site.JB.contact_path }}">Contact</a></li>
-            <li><a href="{{ BASE_PATH }}{{ site.JB.elsewhere_path }}">Elsewhere</a></li>
-            <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
-            <li><a href="{{ BASE_PATH }}{{ site.JB.pages_path }}">Pages</a></li>
-            <li><a href="{{ BASE_PATH }}{{ site.JB.categories_path }}">Categories</a></li>
-            <li><a href="{{ BASE_PATH }}{{ site.JB.tags_path }}">Tags</a></li>
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
           </ul>
         </nav>
         <ul>
