@@ -272,7 +272,7 @@ article header p {
 }
 
 
-@media print, screen and (max-width: 960px) {
+@media print, screen and (max-width: 960px), (max-height: 500px)  {
   
   div.wrapper {
     width:auto;
