@@ -204,7 +204,7 @@ header.main h1 a:link {
   color: inherit;
 }
 
-section {
+section.main {
   width:500px;
   float:right;
   padding-bottom:50px;
@@ -272,6 +272,43 @@ article header p {
 }
 
 
+article footer {
+  font-size: 12px;
+  font-style: italic;
+  text-align: right;
+}
+
+article.post footer h1 {
+  font-weight: normal;
+  display: inline;
+  font-size: inherit;
+  padding-right: 5px;
+}
+
+article.post footer ul {
+  display: inline;
+  list-style:none;
+  padding:0;
+}
+
+article.post footer li {
+  display: inline;
+  margin-right: 5px;
+}
+
+article.post footer li span {
+  display: none;
+}
+
+article footer p.gotop {
+  margin-top: 10px;
+  margin-bottom: 0;
+  font-size: 14px;
+  font-style: normal;
+  text-align: left;
+}
+
+
 @media print, screen and (max-width: 960px), (max-height: 500px)  {
   
   div.wrapper {
@@ -279,7 +316,7 @@ article header p {
     margin:0;
   }
   
-  header.main, section, footer.main, aside {
+  header.main, section.main, footer.main, aside {
     float:none;
     position:static;
     width:auto;
@@ -289,7 +326,7 @@ article header p {
     padding-right:320px;
   }
   
-  section {
+  section.main {
     border:1px solid #e5e5e5;
     border-width:1px 0;
     padding:20px 0;
