@@ -26,24 +26,36 @@
           <h2>{{ site.tagline }}</h2>
           {% endif %}
         </hgroup>
-        <ul class="buttons">
-          <li><a href="http://github.com/{{ site.author.github }}/" rel="me">Code <strong>GitHub</strong></a></li>
-          <li><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me">Connect <strong>LinkedIn</strong></a></li>
-          <li><a href="http://twitter.com/{{ site.author.twitter }}/" rel="me">Follow <strong>Twitter</strong></a></li>
-        </ul>
-      </header>
+
+		<nav>
+          <ul>
+			  <!--
+            {% assign pages_list = site.pages %}
+            {% assign group = 'navigation' %}
+            {% include JB/pages_list %}
+			-->
+			{% for order in (1..10) %}
+			{% for p in site.pages %}
+			{% if p.order == order %}
+			{% if p.group == 'navigation' %}
+			<li> <a href="{{ p.url }}">{{ p.title }}</a></li>
+			{% endif %}
+			{% endif %}
+			{% endfor %}
+			{% endfor %}
+          </ul>
+        </nav>
+ 	 
+             </header>
       <section class="main">
         {{ content }}
       </section>
       <aside>
-        <nav>
-          <ul>
-            {% assign pages_list = site.pages %}
-            {% assign group = 'navigation' %}
-            {% include JB/pages_list %}
-          </ul>
-        </nav>
+
         <ul>
+          <li class="contact"><a href="http://github.com/{{ site.author.github }}/" rel="me">Code <strong>GitHub</strong></a></li>
+          <li class="contact"><a href="http://www.linkedin.com/in/{{ site.author.linkedin }}/" rel="me">Connect <strong>LinkedIn</strong></a></li>
+          <li class="contact"><a href="http://twitter.com/{{ site.author.twitter }}/" rel="me">Follow <strong>Twitter</strong></a></li>
           <li class="contact"><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
         </ul>
       </aside>
